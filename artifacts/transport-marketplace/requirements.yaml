@@ -1,0 +1,15 @@
+packages:
+  "framer-motion": "For page transitions and smooth UI animations"
+  "lucide-react": "For UI icons across the application"
+  "date-fns": "For human-readable date formatting"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images:
+  - path: "artifacts/transport-marketplace/public/images/hero-logistics.png"
+    description: "Abstract geometric representation of global logistics and transportation networks, deep blue and emerald green lines connecting nodes on a clean light background, premium SaaS style"
+    aspect_ratio: "16:9"
+
+notes:
+  - No backend is used. Data is stored in an in-memory mock database and accessed via TanStack Query to simulate real API latency and caching.
+  - The application relies on React Query to handle loading, error, and caching states just like a production app would.

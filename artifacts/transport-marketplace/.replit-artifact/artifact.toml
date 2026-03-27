@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Transport Services Marketplace"
+version = "1.0.0"
+id = "artifacts/transport-marketplace"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24835
+
+[services.development]
+run = "pnpm --filter @workspace/transport-marketplace run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/transport-marketplace", "run", "build" ]
+publicDir = "artifacts/transport-marketplace/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24835"
+BASE_PATH = "/"

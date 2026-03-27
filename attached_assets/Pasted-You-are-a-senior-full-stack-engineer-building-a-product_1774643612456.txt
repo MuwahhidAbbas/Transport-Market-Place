@@ -1,0 +1,232 @@
+You are a senior full-stack engineer building a production-style DEMO marketplace web application for a Transport Services Marketplace.
+
+This project is a portfolio demonstration MVP, NOT a full commercial product.
+Focus on architecture quality, UX polish, and realistic workflows, not heavy integrations.
+
+The final result must look like a startup-ready SaaS prototype suitable to show a client hiring a professional developer.
+
+🎯 PROJECT GOAL
+
+Build a web application where:
+
+Customers post transport requests
+Transport providers submit offers/bids
+Users can view, compare, and accept offers
+
+This is a demo simulation, so backend logic may use mock/local data instead of real APIs.
+
+🧱 TECH STACK (STRICT)
+
+Use:
+
+Frontend: React + Vite
+Styling: TailwindCSS
+Backend simulation: Local JSON mock service layer
+State management: React Context or Zustand
+Routing: React Router
+Icons: Lucide React
+Animations: Framer Motion
+
+NO complex backend servers.
+NO authentication providers.
+Everything must run as a frontend app deployable on Netlify.
+
+🎨 DESIGN REQUIREMENTS
+
+Create a modern SaaS dashboard UI:
+
+Clean marketplace aesthetic
+Professional logistics feel
+Soft shadows
+Rounded cards
+Smooth animations
+Responsive (mobile + desktop)
+
+Color theme:
+
+Primary: #2563EB (blue)
+Accent: #10B981 (green success)
+Neutral grayscale background
+
+Must look like:
+“Uber Freight / Fiverr / Upwork style marketplace”.
+
+👥 USER ROLES (SIMULATED)
+1️⃣ Customer
+
+Can:
+
+Create transport request
+View incoming offers
+Accept an offer
+2️⃣ Transport Provider
+
+Can:
+
+Browse requests
+Submit price offers
+View submitted bids
+
+Switch roles via toggle button (demo mode).
+
+📦 CORE FEATURES (IMPORTANT)
+Transport Request Creation
+
+Form fields:
+
+Pickup location
+Dropoff location
+Cargo type
+Weight
+Delivery date
+Budget
+Notes
+
+Store locally in mock database.
+
+Marketplace Feed
+
+Show all requests as cards:
+
+Route
+Cargo info
+Budget
+Status badge
+“View Details” button
+Request Detail Page
+
+Display:
+
+full request info
+list of provider offers
+Offer Submission
+
+Providers submit:
+
+price
+delivery time
+message
+
+Offer appears instantly.
+
+Offer Comparison UI
+
+Customer sees offers in table:
+
+Provider name
+Price
+ETA
+Rating (mock)
+Accept button
+
+Accept changes status to:
+
+✅ “Transporter Selected”
+
+🧠 DEMO DATA SYSTEM
+
+Create /src/data/mockData.js
+
+Simulate database with:
+
+users
+requests
+offers
+
+Use local state updates only.
+
+NO external APIs.
+
+🧩 FOLDER STRUCTURE (STRICT)
+src/
+ ├─ components/
+ ├─ pages/
+ ├─ layouts/
+ ├─ context/
+ ├─ data/
+ ├─ hooks/
+ ├─ utils/
+ ├─ App.jsx
+ └─ main.jsx
+✨ UX POLISH (VERY IMPORTANT)
+
+Include:
+
+Loading skeletons
+Empty states
+Toast notifications
+Hover animations
+Smooth page transitions
+Status badges
+Professional dashboard navbar
+
+Make it feel like a funded SaaS MVP.
+
+📊 DASHBOARD PAGE
+
+Show metrics cards:
+
+Active Requests
+Offers Submitted
+Completed Jobs
+Avg Offer Price
+
+(Mock calculated values.)
+
+🔎 BONUS (HIGH IMPACT)
+
+Add:
+
+Search/filter requests
+Budget filter slider
+Animated counters
+🚀 DEPLOYMENT REQUIREMENTS
+
+This project MUST be deployable on Netlify.
+
+Create:
+
+netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+💻 WINDOWS COMPATIBILITY
+
+Ensure:
+
+no unix-only commands
+standard npm scripts
+runs using:
+npm install
+npm run dev
+npm run build
+🧾 README.md (MANDATORY)
+
+Create professional README including:
+
+Project overview
+Features
+Architecture explanation
+Demo purpose explanation
+Deployment steps (Netlify)
+Screenshots placeholders
+
+Make README look client-facing.
+
+🎯 FINAL EXPECTATION
+
+The finished app must:
+
+look production-grade
+feel realistic
+demonstrate marketplace logic clearly
+impress a hiring client immediately
+
+Prioritize clarity, structure, and UI excellence over complexity.
+
+Generate complete working code.
