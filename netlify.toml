@@ -1,5 +1,5 @@
 [build]
-  command = "npm install -g pnpm && pnpm install --no-frozen-lockfile && cd artifacts/transport-marketplace && npx vite build --config vite.standalone.config.ts"
+  command = "corepack enable && pnpm install --no-frozen-lockfile && cd artifacts/transport-marketplace && npx vite build --config vite.standalone.config.ts"
   publish = "artifacts/transport-marketplace/dist"
 
 [[redirects]]
